@@ -74,7 +74,6 @@ def user_login(request):
             else:
                 return HttpResponse("Account not active")
         else:
-            print(f"{username} tried to login, password {password}")
             return HttpResponse("Invalid logins details")
     else:
         return render(request, 'basic_app/login.html',{})
